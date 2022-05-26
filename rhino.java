@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class rhino extends Actor
+public class Rhino extends Actor
 {
     /**
      * Act - do whatever the rhino wants to do. This method is called whenever
@@ -14,6 +14,28 @@ public class rhino extends Actor
      */
     public void act()
     {
-        move(4);// Add your action code here.
+        // Add your action code here.
+        if(Greenfoot.isKeyDown("left"))
+        {
+            move(-1);
+        }
+        else if(Greenfoot.isKeyDown("right"))
+        {
+            move(1);
+        }
+        
+        eat();
+    }
+    
+    public void eat()
+    {
+        if(isTouching(Apple.class))
+        {
+        removeTouching(Apple.class);
+        MyWorld world = (MyWorld) getWorld();
+        world.createApple();
+        world.increaseScore();
+        }
+        
     }
 }
