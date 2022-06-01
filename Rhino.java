@@ -37,13 +37,13 @@ public class Rhino extends Actor
     {
         for (int i = 0; i<idleRight.length; i++)
         {
-            idleRight[i]= new GreenfootImage("C:/Users/86153/Downloads/rhinopic/tile" + i + ".png");
+            idleRight[i]= new GreenfootImage("images/rhinopic/tile" + i + ".png");
             idleRight[i].scale(100,50);
         }
         
         for (int i = 0; i<idleLeft.length; i++)
         {
-            idleLeft[i]= new GreenfootImage("C:/Users/86153/Downloads/rhinopic/tile" + i + ".png");
+            idleLeft[i]= new GreenfootImage("images/rhinopic/tile" + i + ".png");
             idleLeft[i].mirrorHorizontally();
             idleLeft[i].scale(100,50);   
         }
